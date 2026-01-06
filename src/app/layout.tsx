@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lachie Insurance | Car Insurance Quotes",
-  description: "Get comprehensive car insurance at competitive prices. Compare quotes in minutes and drive away with peace of mind.",
+  title: "NatSouth | Car Insurance",
+  description: "Get car insurance you can rely on from NatSouth. Comprehensive cover, competitive prices, and 24/7 UK support from a bank you trust.",
 };
 
 export default function RootLayout({

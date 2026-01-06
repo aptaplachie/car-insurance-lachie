@@ -2,6 +2,10 @@ export type Title = 'Mr' | 'Mrs' | 'Ms' | 'Miss' | 'Dr';
 export type Gender = 'male' | 'female' | 'other' | 'prefer-not-to-say';
 export type LicenseType = 'full-uk' | 'provisional' | 'international';
 
+export interface VehicleReg {
+  registration: string;
+}
+
 export interface PersonalInfo {
   title: Title;
   firstName: string;
@@ -21,8 +25,9 @@ export interface PersonalInfo {
 }
 
 export interface QuoteFormData {
+  vehicleReg: VehicleReg;
   personalInfo: PersonalInfo;
   // Future steps will add:
-  // vehicleInfo: VehicleInfo;
+  // vehicleDetails: VehicleDetails;
   // coverDetails: CoverDetails;
 }

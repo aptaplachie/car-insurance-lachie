@@ -44,13 +44,13 @@ export function PersonalInfoStep({ onSubmit, defaultValues }: PersonalInfoStepPr
   });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 sm:space-y-8">
       {/* Your Details Section */}
       <div>
-        <h3 className="text-lg font-semibold text-slate-900 mb-4 pb-2 border-b border-slate-200">
-          Your Details
+        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+          Your details
         </h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           <Select
             label="Title"
             options={titleOptions}
@@ -89,10 +89,10 @@ export function PersonalInfoStep({ onSubmit, defaultValues }: PersonalInfoStepPr
 
       {/* Contact Information Section */}
       <div>
-        <h3 className="text-lg font-semibold text-slate-900 mb-4 pb-2 border-b border-slate-200">
-          Contact Information
+        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+          Contact information
         </h3>
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
           <Input
             label="Email Address"
             type="email"
@@ -113,10 +113,10 @@ export function PersonalInfoStep({ onSubmit, defaultValues }: PersonalInfoStepPr
 
       {/* Address Section */}
       <div>
-        <h3 className="text-lg font-semibold text-slate-900 mb-4 pb-2 border-b border-slate-200">
+        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
           Address
         </h3>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           <Input
             label="Address Line 1"
             error={errors.addressLine1?.message}
@@ -128,7 +128,7 @@ export function PersonalInfoStep({ onSubmit, defaultValues }: PersonalInfoStepPr
             error={errors.addressLine2?.message}
             {...register('addressLine2')}
           />
-          <div className="grid sm:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-3 gap-3 sm:gap-4">
             <Input
               label="City"
               error={errors.city?.message}
@@ -153,7 +153,7 @@ export function PersonalInfoStep({ onSubmit, defaultValues }: PersonalInfoStepPr
 
       {/* Occupation Section */}
       <div>
-        <h3 className="text-lg font-semibold text-slate-900 mb-4 pb-2 border-b border-slate-200">
+        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
           Occupation
         </h3>
         <div className="max-w-md">
@@ -169,10 +169,10 @@ export function PersonalInfoStep({ onSubmit, defaultValues }: PersonalInfoStepPr
 
       {/* License Information Section */}
       <div>
-        <h3 className="text-lg font-semibold text-slate-900 mb-4 pb-2 border-b border-slate-200">
-          License Information
+        <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-200">
+          Driving licence
         </h3>
-        <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
+        <div className="grid sm:grid-cols-2 gap-3 sm:gap-4 max-w-2xl">
           <Select
             label="License Type"
             options={licenseTypeOptions}
@@ -193,9 +193,9 @@ export function PersonalInfoStep({ onSubmit, defaultValues }: PersonalInfoStepPr
       </div>
 
       {/* Submit Button */}
-      <div className="flex justify-end pt-4 border-t border-slate-200">
-        <Button type="submit" size="lg" disabled={isSubmitting}>
-          {isSubmitting ? 'Processing...' : 'Continue to Vehicle Details'}
+      <div className="flex flex-col sm:flex-row sm:justify-end pt-4 border-t border-gray-200">
+        <Button type="submit" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
+          {isSubmitting ? 'Processing...' : 'Continue to vehicle'}
         </Button>
       </div>
     </form>
