@@ -227,9 +227,17 @@ function OfferCard({ offer }: { offer: Offer }) {
         </div>
 
         {/* CTA */}
-        <button className="w-full bg-purple-700 text-white font-semibold py-3 rounded-full hover:bg-purple-800 transition-colors">
-          Select this quote
-        </button>
+        <div className="flex gap-2">
+          <Link
+            href={`/offers/${offer.id}`}
+            className="flex-1 bg-white text-purple-700 border border-purple-200 font-semibold py-3 rounded-full hover:bg-purple-50 transition-colors text-center"
+          >
+            View details
+          </Link>
+          <button className="flex-1 bg-purple-700 text-white font-semibold py-3 rounded-full hover:bg-purple-800 transition-colors">
+            Select quote
+          </button>
+        </div>
       </div>
     </div>
   );
