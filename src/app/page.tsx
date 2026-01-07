@@ -53,6 +53,20 @@ export default function Home() {
               <p>NatSouth Insurance is authorised and regulated by the Financial Conduct Authority.</p>
             </div>
           </div>
+
+          {/* Demo Navigation */}
+          <div className="border-t border-gray-800 mt-6 pt-6">
+            <div className="flex flex-wrap items-center justify-center gap-3 text-xs">
+              <span className="text-gray-500">Demo pages:</span>
+              <a href="/" className="text-purple-400 hover:text-purple-300 transition-colors">Home</a>
+              <span className="text-gray-700">|</span>
+              <a href="/quote" className="text-purple-400 hover:text-purple-300 transition-colors">Quote Flow</a>
+              <span className="text-gray-700">|</span>
+              <a href="/quote?prefill=natsouth" className="text-purple-400 hover:text-purple-300 transition-colors">Quote (Prefilled)</a>
+              <span className="text-gray-700">|</span>
+              <a href="/offers" className="text-purple-400 hover:text-purple-300 transition-colors">Offers Page</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
